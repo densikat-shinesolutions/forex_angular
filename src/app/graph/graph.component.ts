@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Http }              from '@angular/http';
 
 @Component({
   selector: 'app-graph',
@@ -7,19 +8,44 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GraphComponent implements OnInit {
 
-  constructor() {
+  constructor(private http: Http) {
 
-    this.options = {
-      title : { text : 'simple chart' },
-      series: [{
-        data: [29.9, 71.5, 106.4, 129.2],
-      }]
-    };
+    http.get('http://localhost:8080/fxRates?currencyPair=USDEUR').subscribe(res => {
+      this.options = {
+        title : { text : 'USDEUR' },
+        series : [{
+          name : 'USDEUR',
+          data : res.json(),
+          tooltip: {
+            valueDecimals: 6
+          }
+        }]
+      };
+    });
   }
 
   options: Object;
 
+  private currencyPair: string;
+
   ngOnInit() {
+  }
+
+  changeChartCurrencies(currencyPair: string){
+
+    this.http.get('http://localhost:8080/fxRates?currencyPair='+currencyPair).subscribe(res => {
+      this.options = {
+        title : { text : currencyPair  },
+        series : [{
+          name : currencyPair,
+          data : res.json(),
+          tooltip: {
+            valueDecimals: 6
+          }
+        }]
+      };
+    });
+
   }
 
 }

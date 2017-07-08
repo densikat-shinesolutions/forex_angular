@@ -1,3 +1,19 @@
-<p>
-  <chart type="StockChart" [options]="options"></chart>
-</p>
+
+<div>
+  <div class="currency-selector">
+    <md-select (change)="changeChartCurrencies(currencyPair);" required placeholder="Currencies Pair" [(ngModel)]="currencyPair">
+      <md-option value="USDEUR"><img class="small-icon-flags" src='../../assets/images/USD.gif' /> USD to EUR</md-option>
+      <md-option value="EURUSD"><img class="small-icon-flags" src='../../assets/images/EUR.gif' /> EUR to USD</md-option>
+      <md-option value="JPYEUR"><img class="small-icon-flags" src='../../assets/images/JPY.gif' /> JPY to EUR</md-option>
+      <md-option value="GBPEUR"><img class="small-icon-flags" src='../../assets/images/GBP.gif' /> GBP to EUR</md-option>
+      <md-option value="AUDEUR"><img class="small-icon-flags" src='../../assets/images/AUD.gif' /> AUD to EUR</md-option>
+      <md-option value="CADEUR"><img class="small-icon-flags" src='../../assets/images/CAD.gif' /> CAD to EUR</md-option>
+      <md-option value="CHFEUR"><img class="small-icon-flags" src='../../assets/images/CHF.gif' /> CHF to EUR</md-option>
+    </md-select>
+  </div>
+
+  <div class="currency-chart">
+    <chart type="StockChart" [options]="options"></chart>
+  </div>
+</div>
+
