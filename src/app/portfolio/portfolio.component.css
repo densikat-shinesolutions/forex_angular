@@ -1,0 +1,29 @@
+.portfolio-container {
+  text-align: left;
+}
+
+.icon-flags {
+  width: 50px;
+  height: 40px;
+}
+
+
+.portfolio-table > tr > th,td {
+  padding: 10px;
+  text-align: center;
+  padding-right: 25px;
+}
+
+.portfolio-table > tr > td,th {
+  padding: 10px;
+  text-align: center;
+  padding-right: 25px;
+}
+
+.positive-variation {
+  color: green;
+}
+
+.negative-variation {
+  color: red;
+}

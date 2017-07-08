@@ -1,0 +1,77 @@
+<md-card class="order-card">
+  <h4> Place Forex Transaction</h4>
+
+
+
+  <form (ngSubmit)="onSubmit(order)">
+
+    <table class="order-table">
+      <tr>
+        <td colspan="2">
+          <md-select required placeholder="Operation" name="operation" [(ngModel)]="order.operation">
+            <md-option value="buy">BUY</md-option>
+            <md-option value="sell">SELL</md-option>
+          </md-select>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <md-select [(ngModel)]="order.toCurrency" required placeholder="Currency" name="toCurrency">
+            <md-option *ngFor="let account of portfolio" value="{{account.currency}}">
+              <img class="small-icon-flags" src='../../assets/images/{{account.currency}}.gif' /> {{account.currency}}
+            </md-option>
+          </md-select>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <md-input-container>
+            <input mdInput placeholder="Purchase or Sale Amount" currencyMask [options]="{ prefix: '' }"
+                   name="amount"
+                   required
+                   pattern="[0-9.]*"
+                   minlength="1"
+                   maxlength="16"
+                   [(ngModel)]="order.amount"
+            >
+          </md-input-container>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <md-select (change)="setExchangeAmount(order);" required name="fromAccountId" [(ngModel)]="order.fromAccountId" placeholder="From Account#">
+            <md-option *ngFor="let account of portfolio" value="{{account.accountId}}">
+              <img class="small-icon-flags" src='../../assets/images/{{account.currency}}.gif' />{{account.accountId}}
+            </md-option>
+          </md-select>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <md-input-container>
+            <input [(ngModel)]="order.exchangedAmount" name="exchangedAmount" mdInput disabled
+                   placeholder="Cost or Proceeds" currencyMask [options]="{ prefix: '' }" value="{{order.exchangedAmount}}"
+            >
+            {{order.fromCurrency}}
+          </md-input-container>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="submit" md-raised-button color="primary">Confirm</button>
+        </td>
+        <td>
+          <button (click)="resetOrder(order);" md-raised-button class="reset-button" color="danger">Reset</button>
+        </td>
+      </tr>
+
+    </table>
+
+
+  </form>
+
+
+
+
+
+</md-card>
