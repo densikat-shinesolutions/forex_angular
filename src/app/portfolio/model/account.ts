@@ -6,7 +6,6 @@ export class Account {
   currency: string;
   variation: number;
 
-
   constructor(values: Object = {}) {
     Object.assign(this, values);
   }
