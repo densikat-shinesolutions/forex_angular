@@ -1,0 +1,44 @@
+<!--The whole content below can be removed with the new code.-->
+<body class="demo-body mdc-typography">
+<aside class="mdc-persistent-drawer">
+  <nav class="mdc-persistent-drawer__drawer">
+    <div class="mdc-persistent-drawer__toolbar-spacer"></div>
+    <div class="mdc-list-group">
+      <nav class="mdc-list">
+        <a class="mdc-list-item mdc-persistent-drawer--selected" routerLink="/portfolio" routerLinkActive="active">
+          <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">account_balance</i>Portfolio
+        </a>
+        <a class="mdc-list-item" routerLink="/chart" routerLinkActive="active">
+          <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">trending_up</i>Chart
+        </a>
+      </nav>
+    </div>
+  </nav>
+</aside>
+<div class="demo-content">
+  <header class="mdc-toolbar mdc-elevation--z4">
+    <div class="mdc-toolbar__row">
+      <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+        <button class="demo-menu material-icons mdc-toolbar__icon--menu">menu</button>
+        <span class="mdc-toolbar__title catalog-title">Forex Trading Platform</span>
+      </section>
+    </div>
+  </header>
+
+  <main class="demo-main">
+    <div style="text-align:center">
+      <!-- Left aligned menu below button -->
+
+
+      <router-outlet></router-outlet>
+
+
+
+    </div>
+  </main>
+
+</div>
+
+
+
+
