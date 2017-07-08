@@ -1,0 +1,52 @@
+<md-card class="portfolio-container">
+
+
+
+
+  <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+    <thead>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">Currency</th>
+      <th>Account #</th>
+      <th>Balance</th>
+      <th>
+        Balance in Euro
+      </th>
+      <th>
+        Variation
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let account of portfolio">
+      <td>
+        <img class="icon-flags" src='../../assets/images/{{account.currency}}.gif' />
+      </td>
+      <td>
+        {{account.accountId}}
+      </td>
+      <td>
+        {{account.balance | currency:account.currency:true:'1.2-2'}}
+      </td>
+      <td>
+        {{account.euroBalance | currency:'EUR':true:'1.2-2'}}
+      </td>
+      <td>
+        <span *ngIf="account.variation >= 0">
+          <span class="positive-variation">{{account.variation | percent }}</span>
+        </span>
+        <span *ngIf="account.variation < 0">
+          <span class="negative-variation">{{account.variation | percent }}</span>
+        </span>
+      </td>
+
+    </tr>
+    </tbody>
+  </table>
+
+
+
+
+</md-card>
+
+

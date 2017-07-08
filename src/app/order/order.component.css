@@ -1,0 +1,27 @@
+.order-table td {
+  padding: 18px;
+  text-align: center;
+  padding-right: 25px;
+  width: 100%;
+}
+
+.order-table {
+  width: 100%;
+}
+
+.order-card {
+  margin-left: 50px;
+  height: 90%;
+  width: 100%;
+  text-align: center;
+}
+
+.small-icon-flags {
+  height: 20px;
+  width: 30px;
+}
+
+.reset-button {
+  color: white;
+  background-color: #d50000;
+}
