@@ -1,4 +1,3 @@
-
 # Forex Trading Platform Demo with Angular 2
 
 # How to set it up?
@@ -47,18 +46,31 @@ ng generate component portfolio
 # Need all those libraries for project to compile
 
 npm install  @angular/cdk@2.0.0-beta.8 --save
+
 npm install  @angular/common@4.2.6 --save
+
 npm install  @angular/core@4.2.6 --save
+
 npm install  @angular/platform-browser@4.2.6 --save
+
 npm i @angular2-material/core
+
 npm install whatwg-fetch --save
+
 npm i hammerjs
+
 npm install hammerjs --save-dev
+
 npm install @types/hammerjs --save-dev
+
 npm install md-data-table
+
 npm install ng2-currency-mask --save
+
 npm install @angular/forms --save
+
 npm install angular2-highcharts --save
+
 npm install @material/drawer --save
 
 
@@ -91,4 +103,3 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
