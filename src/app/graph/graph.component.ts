@@ -10,7 +10,7 @@ export class GraphComponent implements OnInit {
 
   constructor(private http: Http) {
 
-    http.get('http://localhost:8080/fxRates?currencyPair=USDEUR').subscribe(res => {
+    http.get('http://35.186.178.180:8080/fxRates?currencyPair=USDEUR').subscribe(res => {
       this.options = {
         title : { text : 'USDEUR' },
         series : [{
@@ -33,7 +33,7 @@ export class GraphComponent implements OnInit {
 
   changeChartCurrencies(currencyPair: string){
 
-    this.http.get('http://localhost:8080/fxRates?currencyPair='+currencyPair).subscribe(res => {
+    this.http.get('http://35.186.178.180:8080/fxRates?currencyPair='+currencyPair).subscribe(res => {
       this.options = {
         title : { text : currencyPair  },
         series : [{
