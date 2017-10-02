@@ -2,6 +2,8 @@
 
 http://35.186.178.180
 
+![alt text](https://bitbucket.org/Mike_Do/forex_angular/src/d7ba3ee68b838d8c10e766bbfb1ebe8d7f9e841d/dataflow-diagram.jpeg?at=master&fileviewer=file-view-default)
+
 # How to set it up?
 
 
