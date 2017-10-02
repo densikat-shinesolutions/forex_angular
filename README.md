@@ -2,7 +2,7 @@
 
 http://35.186.178.180
 
-![picture](https://bitbucket.org/Mike_Do/forex_angular/src/d7ba3ee68b838d8c10e766bbfb1ebe8d7f9e841d/dataflow-diagram.jpeg?at=master&fileviewer=file-view-default)
+![Scheme](dataflow-diagram.jpeg)
 
 # How to set it up?
 
