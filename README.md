@@ -1,4 +1,4 @@
-# Forex Trading Platform Demo with Angular 2
+# Simple Forex Trading Platform Demo with Angular 2
 
 http://35.186.178.180
 
