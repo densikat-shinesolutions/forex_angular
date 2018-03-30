@@ -1,6 +1,6 @@
 # Simple Forex Trading Platform Demo with Angular 2
 
-http://35.186.178.180
+http://demo-mikedo-angular.online
 
 ![Scheme](dataflow-diagram.jpeg)
 
@@ -110,4 +110,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 # Demo at
-http://35.186.178.180
+http://demo-mikedo-angular.online
