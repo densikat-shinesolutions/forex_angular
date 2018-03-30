@@ -1,4 +1,4 @@
-# Simple Forex Trading Platform Demo with Angular 2
+# Simple Forex Trading Platform Demo with Angular 2 by Michel Doucerain
 
 http://demo-mikedo-angular.online
 
