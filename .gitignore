@@ -16,7 +16,21 @@
 *.launch
 .settings/
 *.sublime-workspace
-*.xml
+baseRefactoring.xml
+colors.scheme.xml
+databaseDrivers.xml
+databaseSettings.xml
+debugger.renderers.xml
+debugger.xml
+diff.xml
+editor.xml
+gradle.run.settings.xml
+ide.general.xml
+markdown_navigator.shared.xml
+mavenVersion.xml
+scala.xml
+ui.lnf.xml
+web-browsers.xml
 
 # IDE - VSCode
 .vscode/*
