@@ -1,5 +1,6 @@
 pipeline{
   agent { label 'slave' }
+  tools {nodejs "node"}
   stages{
     stage ('checkout'){
       steps{
